@@ -1,3 +1,9 @@
+
+# coding: utf-8
+
+# In[2]:
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -28,3 +34,4 @@ plt.plot(X[:,1], Yhat_ml, label='maximum likelihood')
 plt.plot(X[:,1], Yhat_map, label='map')
 plt.legend()
 plt.show()
+

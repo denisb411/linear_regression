@@ -1,3 +1,9 @@
+
+# coding: utf-8
+
+# In[4]:
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -16,6 +22,10 @@ costs = []
 w = np.random.randn(D) / np.sqrt(D) #random initialization
 learning_rate = 0.001
 l1 = 10.0
+
+# J = (Y - Xw)T . (Y - Xw)
+# dJ/dw = -2X.T.Y + 2X.T.Xw = 2X.T(Yhat - Y)
+
 for t in range(500):
     Yhat = X.dot(w)
     delta = Yhat - Y
@@ -27,9 +37,11 @@ for t in range(500):
 plt.plot(costs)
 plt.show()
 
+print("True w:", true_w)
 print("Final w:", w)
 
 plt.plot(true_w, label='true w')
 plt.plot(w, label='w_map')
 plt.legend()
 plt.show()
+
